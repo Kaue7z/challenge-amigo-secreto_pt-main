@@ -13,3 +13,14 @@ function capturaAmigo (){
     atualizarLista();
     campo.value = ""
 }
+
+function atualizarLista (amigos) {
+    let listaAmigos = document.getElementById("listaAmigos")
+    listaAmigos.innerHTML = "";
+    
+    for (let i = 0; i < amigos.length; i++){
+        let item = document.createElement("li")
+        item.textContent = amigos[i]
+        listaAmigos.appendChild(item)
+    }
+}
