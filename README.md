@@ -1,48 +1,42 @@
-No trecho
+# Sorteador de Amigos 🎲
 
-let amigos = [];
+Um simples projeto em JavaScript que permite adicionar nomes em uma lista e sortear aleatoriamente um amigo.
 
-Fiz a criação de uma variavel vazia, em modo lista "[]" Para poder armazenar os nomes digitados.
+## ✨ Funcionalidades
 
-                                     ///////////////////////
-function adicionarAmigo() { let campo = document.getElementById("amigo"); let nome = campo.value.trim();
+- Adicionar nomes em uma lista.
+- Exibir todos os nomes cadastrados.
+- Sortear um nome aleatório da lista.
+- Mostrar o resultado do sorteio na tela.
+- Registrar o sorteio também no console do navegador.
 
-if (nome === ""){
+## 🚀 Como usar
 
-    alert("Por favor, insira um nome.")
-    return;
-}
+1. Abra o arquivo **index.html** no navegador.
+2. Digite um nome no campo de texto e clique em **Adicionar**.
+3. Os nomes adicionados aparecerão em uma lista.
+4. Clique em **Sortear Amigo** para escolher aleatoriamente um nome da lista.
+5. O resultado será exibido na tela e também no console (`F12` no navegador).
 
-amigos.push(nome);
+## 📂 Estrutura do projeto
 
-atualizarLista();
+📁 projeto-sorteador
+┣ 📜 index.html # Página principal
+┣ 📜 script.js # Lógica em JavaScript
+┗ 📜 style.css # (opcional) Estilos da página
 
-campo.value = "";
-}
+markdown
+Copiar código
 
-Esta parte, fiz a criação de uma função onde a mesma estaria responsavel em pegar os nomes digitados no campoID amigo, não permitir espaços no campo com "value.trim". Usando o amigos.push para puxar o valor digitado para a variavel criada para a lista.
+## 🛠️ Tecnologias utilizadas
 
-function atualizarLista(){ let lista = document.getElementById("listaAmigos") lista.innerHTML = "";
+- **HTML5**
+- **CSS3**
+- **JavaScript**
 
-for (let i = 0; i < amigos.length; i++) {
-let item = document.createElement("li"); 
-item.textContent = amigos[i];           
-lista.appendChild(item); 
-}
-}
+📌 Observações
+Se a lista estiver vazia, será exibido um alerta.
 
-Na função a cima, ela foi criada para atualizar a lista e também criar indice por item da lista, usando o conteudo da variavel amigos para cada indice.
+Espaços em branco não são aceitos como nomes.
 
-function sortearAmigo(){ if (amigos.length === 0){ alert("A lista esta vazia!"); return }
-
-let indice = Math.floor(Math.random() * amigos.length);
-let amigoSorteado = amigos[indice];
-console.log(amigoSorteado)
-
-document.getElementById("resultado").innerHTML = `O amigo sorteado foi ${amigoSorteado}`
-}
-
-E por fim, a função responsavel por sortear e mostrar no front, o amigo sorteado. Usando Math.floor para arrendodar o numero gerado para cima e Math.random para gerar um numero aleatorio conforme o indice da lista amigos.
-
-O console.log, utilizei para visualizar o historico de sorteios no console do navegador.
-
+Cada sorteio gera um nome aleatório diferente.
